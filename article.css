@@ -1,0 +1,113 @@
+section.article{
+    margin: 0px auto;/*水平置中？*/
+    width: 65%;
+    padding:40px 0px;
+}
+
+
+section.article>.row{
+    width:100%;
+    /*height:350px;*/
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+section.article>.row:hover{
+    transform: scale(1.01,1.01);
+}
+/*section.article>.row>.image*/
+section.article>.row>.image{
+    flex:none;
+    width:50%;
+}
+section.article>.row>.image>.mask{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height: 100%;
+    background-color:rgba(255,255,255,0.8);
+
+    transition: background-color 0.5s;
+}
+section.article>.row>.image>.mask:hover{
+    background-color:rgba(255,255,255,0);
+}
+section.article>.row>.image-1{
+    background-image: url("pictures/article-1.jpg");
+    background-size: cover;
+}
+section.article>.row>.image-2{
+    background-image: url("pictures/article-2.jpg");
+    background-size: cover;
+}
+/*section.article>.row>.content*/
+section.article>.row>.content{
+    flex:none;
+    width:44%;
+    
+    padding: 2% 3% 0 3%;
+    
+
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: #999999;
+}
+section.article>.row>.content>.title{
+    font-size: 2em;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 20px;
+}
+section.article>.row>.content>.story{
+    height: 180px;
+}
+section.article>.row>.content>.action{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-top:1px solid #DDDDDD;
+}
+section.article>.row>.content>.action>.btn{
+    margin-right: 30px;
+}
+
+section.article>.block{
+    margin-bottom: 30px;
+}
+/*footer*/
+footer{
+    height: 100px;
+    width:100%;
+    background-color: #000000;
+    color: white;
+    font-size: 0.3em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+@media(max-width:800px){
+    section.article{
+        width: 90%;
+    }
+    section.article>.row{
+        flex-direction: column;
+        height: 500px;
+        margin-bottom: 50px;
+    }
+    section.article>.row>.image{
+        flex:none;
+        width:100%;
+        height: 235px;
+    }
+    section.article>.row>.content{
+        flex:none;
+        width:94%;
+        height: 235px;
+    }
+    section.article>.row>.content>.story{
+        height: 100px;
+    }    
+}
